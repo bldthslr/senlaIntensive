@@ -1,0 +1,8 @@
+.idea/
+*.iml
+*.class
+*.jar
+/di/target/
+/main/target/
+/.idea/
+/di/src/

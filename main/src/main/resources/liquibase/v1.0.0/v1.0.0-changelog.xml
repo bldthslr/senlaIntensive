@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="2023-09-28_22:00:00" author="Victor Prigorianu">
+        <createTable tableName="user">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(32)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="varchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="login" type="varchar(32)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="char(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="text"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
